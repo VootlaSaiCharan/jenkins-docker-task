@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     // Build Docker image
-                    git clone https://github.com/VootlaSaiCharan/jenkins-docker-task.git
+                    git 'https://github.com/VootlaSaiCharan/jenkins-docker-task.git'
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Run tests if needed
-                    docker build -t pythonlinux .
+                    sh 'docker build -t pythonlinux .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Deploy the Docker image as needed
-                    docker run -it pythonlinux
+                    sh 'docker run -it pythonlinux'
                 }
             }
         }
