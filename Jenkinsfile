@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Deploy the Docker image as needed
-                    sh 'docker run -it pythonlinux'
+                    sh 'docker run -i pythonlinux'
                 }
             }
         }
