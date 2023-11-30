@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     stages {
-        stage('Build') {
+        stage('Git') {
             steps {
                 script {
                     // Build Docker image
@@ -11,7 +11,7 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Build') {
             steps {
                 script {
                     // Run tests if needed
@@ -20,7 +20,7 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Run') {
             steps {
                 script {
                     // Deploy the Docker image as needed
