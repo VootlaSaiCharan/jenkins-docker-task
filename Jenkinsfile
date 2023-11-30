@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Run tests if needed
-                    sh 'sudo -S docker build -t pythonlinux .'
+                    sh 'docker build -t pythonlinux .'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Deploy the Docker image as needed
-                    sh 'sudo -S docker run -it pythonlinux'
+                    sh 'docker run -it pythonlinux'
                 }
             }
         }
