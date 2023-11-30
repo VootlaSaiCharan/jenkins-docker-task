@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Run tests if needed
-                    sh 'sudo -S docker build -t pythonlinux /var/lib/jenkins/workspace/jenkins-docker/'
+                    sh 'docker build -t pythonlinux /var/lib/jenkins/workspace/jenkins-docker/'
                 }
             }
         }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 script {
                     // Deploy the Docker image as needed
-                    sh 'sudo -S docker run -it pythonlinux'
+                    sh 'docker run -it pythonlinux'
                 }
             }
         }
