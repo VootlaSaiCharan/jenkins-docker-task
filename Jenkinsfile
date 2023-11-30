@@ -1,3 +1,11 @@
+use below commands to run the build
+
+// usermod -aG docker jenkins
+// usermod -aG root jenkins
+// chmod 664 /var/run/docker.sock
+
+
+
 pipeline {
     agent any
 
