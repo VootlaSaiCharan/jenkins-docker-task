@@ -15,7 +15,7 @@ pipeline {
             steps {
                 script {
                     // Run tests if needed
-                    sh 'docker build -t pythonlinux /var/lib/jenkins/workspace/jenkins-docker/'
+                    sh 'docker build -t pythonlinux .'
                 }
             }
         }
